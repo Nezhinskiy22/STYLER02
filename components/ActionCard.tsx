@@ -14,16 +14,16 @@ const ActionCard = () => {
   }
   return (
     <View>
-      <Text style={styles.headingText}>BlogCard</Text>
+      <Text style={styles.headingText}>Blog Card</Text>
       <View style={[styles.card, styles.elevatedCard]}>
         <View style={styles.headingContainer}>
           <Text style={styles.headerText}>
-            What's new in JavaScript 21 - ES12?
+            What's new in Javascript 21 - ES12
           </Text>
         </View>
         <Image
           source={{
-            uri: 'https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fz5bt820sgpi83f2mxixg.png',
+            uri: 'https://future-architect.github.io/images/20210617a/eyecatch.png',
           }}
           style={styles.cardImage}
         />
@@ -42,11 +42,11 @@ const ActionCard = () => {
                 'https://blog.learncodeonline.in/whats-new-in-javascript-21-es12',
               )
             }>
-            <Text style={styles.socialLinks}>Read more</Text>
+            <Text style={styles.socialLinks}>Read More</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() =>
-              openWebsite('https://www.instagram.com/javascript.js/')
+              openWebsite('https://www.instagram.com/hiteshchoudharyofficial/')
             }>
             <Text style={styles.socialLinks}>Follow me</Text>
           </TouchableOpacity>
@@ -59,15 +59,57 @@ const ActionCard = () => {
 export default ActionCard;
 
 const styles = StyleSheet.create({
-  headingText: {},
-  card: {},
-  elevatedCard: {},
-  headingContainer: {},
-  headerText: {},
-  cardImage: {
-    height: 100,
+  headingText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    paddingHorizontal: 8,
   },
-  bodyContainer: {},
-  footerContainer: {},
-  socialLinks: {},
+  card: {
+    width: 350,
+    height: 360,
+    borderRadius: 6,
+    marginVertical: 12,
+    marginHorizontal: 16,
+  },
+  elevatedCard: {
+    backgroundColor: '#E07C24',
+    elevation: 3,
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+    shadowColor: '#333',
+    shadowOpacity: 0.4,
+  },
+  headingContainer: {
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  headerText: {
+    color: '#000000',
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  cardImage: {
+    height: 190,
+  },
+  bodyContainer: {
+    padding: 10,
+  },
+  footerContainer: {
+    padding: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+  },
+  socialLinks: {
+    fontSize: 16,
+    color: '#000000',
+    backgroundColor: '#FFF',
+    paddingHorizontal: 20,
+    paddingVertical: 6,
+    borderRadius: 6,
+  },
 });
